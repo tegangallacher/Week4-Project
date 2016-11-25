@@ -42,5 +42,3 @@ transaction1.save
 transaction2.save
 
 
-binding.pry
-nil

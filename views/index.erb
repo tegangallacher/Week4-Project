@@ -1,0 +1,10 @@
+<h1>All Transactions</h1>
+<p><a href="/transactions/new">Add a new transaction</a></p>
+<% for transaction in @transactions %>
+<p>Item: <%= transaction.item() %></p>
+<p>Amount: £<%= transaction.amount() %> </p>
+<p>Merchant: <%= transaction.merchant.name %> </p>
+<p>Category: <%= transaction.category.tag %> </p>
+<a href="/transactions/<%= transaction.id() %>">View Details</a>
+<hr/>
+<% end %>

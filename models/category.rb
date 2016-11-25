@@ -37,4 +37,11 @@ class Category
     SqlRunner.run( sql )
   end
 
+  def self.update( options )
+    sql = "UPDATE categories SET
+          tag='#{options['tag']}'
+          WHERE id='#{options['id']}'"
+    SqlRunner.run( sql )
+  end
+
 end
