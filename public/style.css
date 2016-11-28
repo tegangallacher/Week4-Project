@@ -1,8 +1,30 @@
 @font-face {
-    font-family: Amarillo;
-    src: url();
+    font-family: "amarillo";
+    src: url("/amarillo/Amarillo.ttf");
+}
 
-body {
-  font-family: Amarillo;
-  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: right;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.title {
+    font-family: amarillo;
+    color: white;
+    padding: 10px;
 }
