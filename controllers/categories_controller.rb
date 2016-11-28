@@ -31,6 +31,9 @@ get '/categories/:id' do
   erb(:transaction_by_category)
 end
 
+post '/categories/:id/hi' do
+  redirect to ("/categories/:id")
+end 
 
 get '/categories/:id/edit' do
   @category = Category.find( params[:id] )
