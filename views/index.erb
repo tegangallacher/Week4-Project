@@ -15,7 +15,7 @@
 
 <p>
   <label>
-    Category:
+    Filter by category:
     <select name="category_id">
      <% for category in @categories %>
      <option value="<%=category.id%>"><%=category.tag%></option>
@@ -23,7 +23,6 @@
    </select>
  </label>
 </p> 
-
-<form action="/categories/<%= transaction.category_id %>/hi" method="post">
+<form action="/categories/<%= category.id %>/filter" method="post">
 <input type="submit" value="GO"/>
 </form>

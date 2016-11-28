@@ -25,15 +25,19 @@ end
 #   redirect to ('/categories')
 # end
 
+
 get '/categories/:id' do
   @transactions = Transaction.transactions_by_category(params[:id])
   @total = Transaction.total_expenditure_by_category(params[:id])
   erb(:transaction_by_category)
 end
 
-post '/categories/:id/hi' do
-  redirect to ("/categories/:id")
+post '/categories/:id/filter' do
+  Transaction.transactions_by_category(params[:id])
+  redirect to ("/categories/#{params[:id]}")
 end 
+
+
 
 get '/categories/:id/edit' do
   @category = Category.find( params[:id] )
