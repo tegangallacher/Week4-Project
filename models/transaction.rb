@@ -70,5 +70,11 @@ class Transaction
     SqlRunner.run( sql )
   end
 
+  def total_expenditure 
+    sql = "SELECT SUM(amount) FROM transactions;"
+    result = SqlRunner.run( sql )
+    return Transaction.new( result.first )
+  end
+
 
 end

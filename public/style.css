@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Amarillo;
+    src: url();
+
+body {
+  font-family: Amarillo;
+}
