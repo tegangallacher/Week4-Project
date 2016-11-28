@@ -7,6 +7,7 @@ require('pry-byebug')
 
 get '/transactions' do
   @transactions = Transaction.all()
+  @categories = Category.all()
   @total = Transaction.total_expenditure
   erb( :index )
 end

@@ -1,5 +1,17 @@
 <h1>All Transactions</h1>
 <p><a href="/transactions/new">Add a new transaction</a></p>
+<p>
+  <label>
+    Category:
+    <select name="category_id">
+
+     <% for category in @categories %>
+      <option value="<%=category.id%>"><%=category.tag%></option>
+    <% end %>
+    </select>
+  </label>
+  <a href="/categories/<%= category.id %>">Filter</a>
+</p> 
 <p>Total Expenditure: £<%= @total.first['sum'] %></p>
 <% for transaction in @transactions %>
 <p>Item: <%= transaction.item() %></p>
@@ -9,4 +21,5 @@
 <a href="/transactions/<%= transaction.id() %>">View Details</a>
 <hr/>
 <% end %>
+
 

@@ -26,9 +26,8 @@ end
 # end
 
 get '/categories/:id' do
-
   @transactions = Transaction.transactions_by_category(params[:id])
-  #@total = Transaction.total_expenditure_by_category(params[:id])
+  @total = Transaction.total_expenditure_by_category(params[:id])
   erb(:transaction_by_category)
 end
 
