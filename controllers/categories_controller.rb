@@ -23,6 +23,10 @@ end
 #   redirect to ('/categories')
 # end
 
+get '/categories/:id' do
+
+end
+
 get '/categories/:id/edit' do
   @category = Category.find( params[:id] )
   erb(:category_edit)

@@ -44,4 +44,12 @@ class Category
     SqlRunner.run( sql )
   end
 
+  def transaction()
+    sql = "SELECT * FROM transactions t
+          INNER JOIN categories c
+          "
+    results = SqlRunner.run( sql )
+    return Category.new( results.first )
+  end
+
 end

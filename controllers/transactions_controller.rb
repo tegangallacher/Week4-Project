@@ -3,12 +3,14 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/category.rb' )
 require_relative( '../models/merchant.rb' )
 require_relative( '../models/transaction.rb' )
+require('pry-byebug')
 
 get '/transactions' do
   @transactions = Transaction.all()
-  total = Transaction.total_expenditure() 
+  @total = Transaction.total_expenditure
   erb( :index )
 end
+
 
 get '/transactions/new' do
   @categories = Category.all()
@@ -43,3 +45,9 @@ post '/transactions/:id' do
   Transaction.update( params )
   redirect to ("/transactions/#{params[:id]}")
 end
+
+
+
+
+
+

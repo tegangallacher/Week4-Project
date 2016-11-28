@@ -1,6 +1,6 @@
 <h1>All Transactions</h1>
 <p><a href="/transactions/new">Add a new transaction</a></p>
-<p>Total Expenditure: <%= transaction.total %></p>
+<p>Total Expenditure: £<%= @total.first['sum'] %></p>
 <% for transaction in @transactions %>
 <p>Item: <%= transaction.item() %></p>
 <p>Amount: £<%= transaction.amount() %> </p>
