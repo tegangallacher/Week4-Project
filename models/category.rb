@@ -1,4 +1,7 @@
 require_relative( '../db/sql_runner' )
+require('pry-byebug')
+require_relative( 'transaction' )
+
 
 class Category
 
@@ -39,17 +42,9 @@ class Category
 
   def self.update( options )
     sql = "UPDATE categories SET
-          tag='#{options['tag']}'
-          WHERE id='#{options['id']}'"
+    tag='#{options['tag']}'
+    WHERE id='#{options['id']}'"
     SqlRunner.run( sql )
-  end
-
-  def transaction()
-    sql = "SELECT * FROM transactions t
-          INNER JOIN categories c
-          "
-    results = SqlRunner.run( sql )
-    return Category.new( results.first )
   end
 
 end

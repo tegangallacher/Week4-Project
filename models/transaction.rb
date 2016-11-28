@@ -32,6 +32,13 @@ class Transaction
     return Transaction.new( results.first )
   end
 
+def self.transactions_by_category(id)
+  sql = "SELECT * FROM transactions WHERE category_id =#{id}"
+  results = SqlRunner.run( sql )
+  return results.map { |hash| Transaction.new( hash ) }
+end
+
+
   def category()
     sql = "SELECT * FROM categories c
           INNER JOIN transactions t
@@ -73,7 +80,11 @@ class Transaction
   def self.total_expenditure 
     sql = "SELECT SUM(amount) FROM transactions;"
     SqlRunner.run( sql )
-    
+  end
+
+  def self.total_expenditure_by_category(id)
+    sql = "SELECT SUM(amount) FROM transactions WHERE category_id =#{id};"
+    SqlRunner.run( sql )  
   end
 
 

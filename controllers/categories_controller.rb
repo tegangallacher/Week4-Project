@@ -1,6 +1,8 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/category.rb' )
+require_relative( '../models/transaction.rb' )
+require('pry-byebug')
 
 get '/categories' do
   @categories = Category.all()
@@ -25,7 +27,11 @@ end
 
 get '/categories/:id' do
 
+  @transactions = Transaction.transactions_by_category(params[:id])
+  #@total = Transaction.total_expenditure_by_category(params[:id])
+  erb(:transaction_by_category)
 end
+
 
 get '/categories/:id/edit' do
   @category = Category.find( params[:id] )
