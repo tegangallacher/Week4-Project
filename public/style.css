@@ -1,10 +1,13 @@
 @font-face {
     font-family: "amarillo";
     src: url("/amarillo/Amarillo.ttf");
+    font-family: "movie_poster";
+    src: url("/sf_movie_poster/SF_Movie_Poster.ttf");
 }
 
 ul {
     list-style-type: none;
+    text-align: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -12,19 +15,48 @@ ul {
 }
 
 li {
-    float: right;
+    float: center;
+
 }
 
 li a {
     display: block;
     color: white;
-    text-align: right;
-    padding: 10px 12px;
+    text-align: center;
+    padding: 10px 40px;
     text-decoration: none;
+    display: inline;
+    font-family: movie_poster;
+    font-size: 30px;
+
 }
 
 .title {
     font-family: amarillo;
     color: white;
     padding: 10px;
+    text-align: center;
+    float: center;
+
+}
+
+.container_welcome {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/564x/c1/55/2b/c1552b6ece12213a72267a7df7ede55c.jpg");
+
+    font-family: amarillo;
+    text-align: center;
+    float: center;
+
+}
+
+p {
+    text-align: center;
+    float: center;
+}
+
+body{
+        width: auto;
+        height:auto;
+        border: 13px solid #bed5cd;
+        
 }
