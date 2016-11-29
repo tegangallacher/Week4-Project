@@ -26,8 +26,18 @@ li a {
     padding: 1px 40px;
     text-decoration: none;
     display: inline;
-    font-family: movie_poster;
+    font-family: "movie_poster";
     font-size: 30px;
+
+}
+
+.home {
+    font-family: "movie_poster";
+    font-size: 50px;
+    text-decoration: none;
+    color: darkslategray;
+    text-align: center;
+    float: center;
 
 }
 
@@ -57,8 +67,8 @@ li a {
 
 div {
     text-align: left;
-    float: left;
-
+    background-color: snow; 
+    flex-wrap: wrap;
 }
 
 
@@ -68,7 +78,7 @@ a, p {
 }
 
 h1 {
-    font-family: movie_poster;
+    font-family: "movie_poster";
     text-align: center;
     float: center;
     font-size: 50px;

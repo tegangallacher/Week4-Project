@@ -1,4 +1,4 @@
-<div>
+
   <label>
     Filter by category:
     <form action="/categories/filter" method="post">
@@ -10,23 +10,23 @@
  </label>
  <input type="submit" value="GO"/>
  </form>
-</div> 
-
-<div><h1>All Transactions</h1>
-
-<p><a href="/transactions/new">Add a new transaction</a></p>
 
 
-<p>Total Expenditure: £<%= @total.first['sum'] %></p></div>
-<% for transaction in @transactions %>
+<h1>All Transactions</h1>
+
+<p><a href="/transactions/new">Add New</a>
+
+
+Total Expenditure: £<%= @total.first['sum'] %></p>
+<div><% for transaction in @transactions %>
 <p>Item: <%= transaction.item() %></p>
 <p>Amount: £<%= transaction.amount() %> </p>
 <p>Merchant: <%= transaction.merchant.name %> </p>
 <p>Category: <%= transaction.category.tag %> </p>
-<a href="/transactions/<%= transaction.id() %>">View Details</a>
+<p><a href="/transactions/<%= transaction.id() %>">View Details</a></p>
 <hr/>
 
-<% end %>
+<% end %></div>
 
 
 

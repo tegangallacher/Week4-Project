@@ -1,4 +1,5 @@
 
+<p>Total Expenditure: £<%= @total.first['sum'] %></p>
 <% for transaction in @transactions %>
 <p>Item: <%= transaction.item() %></p>
 <p>Amount: £<%= transaction.amount() %> </p>
@@ -6,5 +7,5 @@
 <a href="/transactions/<%= transaction.id() %>">View Details</a>
 <hr/>
 <% end %>
-<p>Total Expenditure: £<%= @total.first['sum'] %></p>
+
 
