@@ -47,8 +47,9 @@ post '/transactions/:id' do
   redirect to ("/transactions/#{params[:id]}")
 end
 
-
-
+get '/help' do
+  erb(:help)
+end
 
 
 

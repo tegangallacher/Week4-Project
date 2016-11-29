@@ -23,7 +23,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 10px 40px;
+    padding: 1px 40px;
     text-decoration: none;
     display: inline;
     font-family: movie_poster;
@@ -34,25 +34,48 @@ li a {
 .title {
     font-family: amarillo;
     color: white;
-    padding: 10px;
+    padding: 10px 40px;
     text-align: center;
     float: center;
 
 }
 
 .container_welcome {
-    background-image: url("https://s-media-cache-ak0.pinimg.com/564x/c1/55/2b/c1552b6ece12213a72267a7df7ede55c.jpg");
-
     font-family: amarillo;
     text-align: center;
     float: center;
 
 }
 
-p {
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: column;
+}
+
+div {
+    text-align: left;
+    float: left;
+
+}
+
+
+a, p {
     text-align: center;
     float: center;
 }
+
+h1 {
+    font-family: movie_poster;
+    text-align: center;
+    float: center;
+    font-size: 50px;
+    color: darkslategray;
+}
+
+h2
 
 body{
         width: auto;

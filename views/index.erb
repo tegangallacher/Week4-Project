@@ -1,7 +1,23 @@
-<h1>All Transactions</h1>
+<div>
+  <label>
+    Filter by category:
+    <form action="/categories/filter" method="post">
+    <select name="category_id">
+     <% for category in @categories %>
+     <option value="<%=category.id%>"><%=category.tag%></option>
+     <% end %>
+   </select>
+ </label>
+ <input type="submit" value="GO"/>
+ </form>
+</div> 
+
+<div><h1>All Transactions</h1>
+
 <p><a href="/transactions/new">Add a new transaction</a></p>
 
-<p>Total Expenditure: £<%= @total.first['sum'] %></p>
+
+<p>Total Expenditure: £<%= @total.first['sum'] %></p></div>
 <% for transaction in @transactions %>
 <p>Item: <%= transaction.item() %></p>
 <p>Amount: £<%= transaction.amount() %> </p>
@@ -13,19 +29,5 @@
 <% end %>
 
 
-<p>
-  <label>
-    Filter by category:
-    <form action="/categories/<%= transaction.category.id %>/filter" method="post">
-    <select name="category_id">
-     <% for category in @categories %>
-     <option value="<%=category.id%>"><%=category.tag%></option>
-     <% end %>
-   </select>
- </label>
- <input type="submit" value="GO"/>
- </form>
 
-
-</p> 
 

@@ -33,9 +33,10 @@ get '/categories/:id' do
   erb(:transaction_by_category)
 end
 
-post '/categories/:id/filter' do
-  Transaction.transactions_by_category(params[:id])
-  redirect to ("/categories/#{params[:id]}")
+post '/categories/filter' do
+  @categories = Category.all()
+  Transaction.transactions_by_category(params[:category_id])
+  redirect to ("/categories/#{params[:category_id]}")
 end 
 
 
