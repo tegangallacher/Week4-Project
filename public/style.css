@@ -31,6 +31,18 @@ li a {
 
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: MintCream }
+
 .home {
     font-family: "movie_poster";
     font-size: 50px;
@@ -99,8 +111,7 @@ h1 {
 
 
 body{
-        width: auto;
-        height:auto;
+
         border: 13px solid #bed5cd;
         
 }
