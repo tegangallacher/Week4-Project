@@ -12,7 +12,6 @@ get '/transactions' do
   erb( :index )
 end
 
-
 get '/transactions/new' do
   @categories = Category.all()
   @merchants = Merchant.all()
@@ -50,6 +49,10 @@ end
 get '/help' do
   erb(:help)
 end
+
+get '/about' do
+  erb(:about)
+end 
 
 
 

@@ -39,8 +39,6 @@ post '/categories/filter' do
   redirect to ("/categories/#{params[:category_id]}")
 end 
 
-
-
 get '/categories/:id/edit' do
   @category = Category.find( params[:id] )
   erb(:category_edit)
