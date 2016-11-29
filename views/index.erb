@@ -17,14 +17,12 @@
 
 
   Total Expenditure: £<%= @total.first['sum'] %></p>
-  <div class ="box-1"><% for transaction in @transactions %>
+  <div class= "flexcontainer"><% for transaction in @transactions %>
     <p>Item: <%= transaction.item() %></p>
     <p>Amount: £<%= transaction.amount() %> </p>
     <p>Merchant: <%= transaction.merchant.name %> </p>
     <p>Category: <%= transaction.category.tag %> </p>
-    <p><a href="/transactions/<%= transaction.id() %>">View Details</a></p>
-
-
+    <p><a href="/transactions/<%= transaction.id() %>">View Details</a>
 
     <% end %></div>
 
