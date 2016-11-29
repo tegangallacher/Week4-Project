@@ -18,11 +18,6 @@ post '/merchants' do
   redirect to('/merchants')
 end
 
-# post '/merchants/:id/delete' do
-#   Merchant.destroy(params[:id])
-#   redirect to ('/merchants')
-# end
-
 get '/merchants/:id/edit' do
   @merchant = Merchant.find( params[:id] )
   erb(:merchant_edit)

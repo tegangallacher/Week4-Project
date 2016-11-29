@@ -20,12 +20,6 @@ post '/categories' do
   redirect to('/categories')
 end
 
-# post '/categories/:id/delete' do
-#   Category.destroy(params[:id])
-#   redirect to ('/categories')
-# end
-
-
 get '/categories/:id' do
   @categories = Category.all()
   @transactions = Transaction.transactions_by_category(params[:id])
