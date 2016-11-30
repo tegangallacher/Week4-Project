@@ -1,5 +1,4 @@
 
-<p>Total Expenditure: £<%= @total.first['sum'] %></p>
 
 <table class ="flexcontainer">
 <tr>
@@ -16,5 +15,7 @@
 <td><a href="/transactions/<%= transaction.id() %>">View</a></td>
 </tr>
 <% end %>
+
+<p>Treating yo self total of <%= transaction.category.tag%>: £<%= @total.first['sum'] %></p>
 
 

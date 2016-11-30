@@ -1,11 +1,10 @@
 <h1>Edit Category</h1>
 
-<form action="/categories" method="post">
+<form action="/categories/<%=@category.id%>" method="post">
   <label>
-    Tag:
+    <p>Tag:
     <input type="text" name="tag"  value="<%= @category.tag %>"/>
   </label>
-  <input type="submit" value="Edit" />
+  <input type="submit" value="Save" /></p>
 </form>
-
 

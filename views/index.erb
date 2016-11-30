@@ -1,5 +1,5 @@
 <h1>all transactions</h1>
-
+<p>Treating yo self total: £<%= @total.first['sum'] %></p>
 <table class="flexcontainer">
   <tr>
     <th>Item</th>
@@ -17,20 +17,19 @@
     <td><a href="/transactions/<%= transaction.id() %>">View</a></td>
   </tr>
   <% end %>
-
+</table>
   <p><a href="/transactions/new">Add New</a></p>
-  <p>Treating yo self total: £<%= @total.first['sum'] %></p>
   <p>
     <label>
       Filter by category:
       <form action="/categories/filter" method="post">
-        <select name="category_id">
+        <p><select name="category_id">
          <% for category in @categories %>
          <option value="<%=category.id%>"><%=category.tag%></option>
          <% end %>
        </select>
      </label>
-     <input type="submit" value="GO"/>
+     <input type="submit" value="GO"/></p>
    </form>
  </p>
 

@@ -1,11 +1,11 @@
 <h1>Edit Merchant</h1>
 
-<form action="/merchants" method="post">
+<form action="/merchants/<%= @merchant.id%>" method="post">
   <label>
-    Name:
+    <p>Name:
     <input type="text" name="name"  value="<%= @merchant.name %>"/>
   </label>
-  <input type="submit" value="Edit" />
+  <input type="submit" value="Save" /></p>
 </form>
 
 
