@@ -3,11 +3,10 @@
 <p><a href="/categories/new">Add New</a></p>
 
 <table class="flexcontainer">
-<tr>
-<% for category in @categories %>
-<td><%= category.tag() %></td>
-<td><a href="/categories/<%= category.id %>/edit">Edit</a></td>
-</tr>
-<% end %>
+  <tr>
+    <% for category in @categories %>
+    <td><%= category.tag() %></td>
+    <td><a href="/categories/<%= category.id %>/edit">Edit</a></td>
+  </tr>
+  <% end %>
 </table>
- 

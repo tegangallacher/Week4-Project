@@ -3,10 +3,10 @@
 <p><a href="/merchants/new">Add New</a></p>
 
 <table class="flexcontainer">
-<tr>
-<% for merchant in @merchants %>
-<td><%= merchant.name() %></td>
-<td><a href="/merchants/<%= merchant.id %>/edit">Edit</a></td>
-</tr>
-<% end %>
+  <tr>
+    <% for merchant in @merchants %>
+    <td><%= merchant.name() %></td>
+    <td><a href="/merchants/<%= merchant.id %>/edit">Edit</a></td>
+  </tr>
+  <% end %>
 </table>

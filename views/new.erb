@@ -2,11 +2,11 @@
 <h1>New Transaction</h1>
 
 <form action="/transactions" method="post">
-<p>
-  <label>
-    Item:
-    <input type="text" name="item"/>
-  </label>
+  <p>
+    <label>
+      Item:
+      <input type="text" name="item"/>
+    </label>
   </p>
   <p>
     <label>
@@ -20,25 +20,25 @@
       <select name="merchant_id">
 
        <% for merchant in @merchants %>
-        <option value="<%=merchant.id%>"><%=merchant.name%></option>
-      <% end %>
-      </select>
-    </label>
-    <a href="/merchants/new">Add..</a>
-  </p>  
-  <p>
-    <label>
-      Category:
-      <select name="category_id">
+       <option value="<%=merchant.id%>"><%=merchant.name%></option>
+       <% end %>
+     </select>
+   </label>
+   <a href="/merchants/new">Add..</a>
+ </p>  
+ <p>
+  <label>
+    Category:
+    <select name="category_id">
 
-       <% for category in @categories %>
-        <option value="<%=category.id%>"><%=category.tag%></option>
-      <% end %>
-      </select>
-    </label>
-    <a href="/categories/new">Add..</a>
-  </p> 
-  <p>
+     <% for category in @categories %>
+     <option value="<%=category.id%>"><%=category.tag%></option>
+     <% end %>
+   </select>
+ </label>
+ <a href="/categories/new">Add..</a>
+</p> 
+<p>
   <input type="submit" value="Add"/>
-  </p>
+</p>
 </form>

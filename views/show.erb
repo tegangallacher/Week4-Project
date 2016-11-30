@@ -1,19 +1,19 @@
 <link rel="stylesheet" type="text/css" href="/background.css"/>
 
 <table class="flexcontainer">
-<tr>
-<th>Item</th>
-<th>Amount</th>
-<th>Merchant</th>
-<th>Category</th>
-</tr>
+  <tr>
+    <th>Item</th>
+    <th>Amount</th>
+    <th>Merchant</th>
+    <th>Category</th>
+  </tr>
 
-<tr>
-<td><%= @transaction.item() %></td>
-<td>£<%= @transaction.amount() %> </td>
-<td><%= @transaction.merchant.name %> </td>
-<td><%= @transaction.category.tag %> </td> 
-</tr>
+  <tr>
+    <td><%= @transaction.item() %></td>
+    <td>£<%= @transaction.amount() %> </td>
+    <td><%= @transaction.merchant.name %> </td>
+    <td><%= @transaction.category.tag %> </td> 
+  </tr>
 
 </table>
 
@@ -21,5 +21,5 @@
   <a href="/transactions/<%= @transaction.id %>/edit">Edit</a>
 </p>
 <form action="/transactions/<%= @transaction.id %>/delete" method="post">
-<p><input type="submit" value="Delete"/></p>
+  <p><input type="submit" value="Delete"/></p>
 </form>
