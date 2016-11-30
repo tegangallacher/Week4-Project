@@ -1,7 +1,21 @@
-<p>Item: <%= @transaction.item() %></p>
-<p>Amount: £<%= @transaction.amount() %> </p>
-<p>Merchant: <%= @transaction.merchant.name %> </p>
-<p>Category: <%= @transaction.category.tag %> </p>
+<link rel="stylesheet" type="text/css" href="/background.css"/>
+
+<table class="flexcontainer">
+<tr>
+<th>Item</th>
+<th>Amount</th>
+<th>Merchant</th>
+<th>Category</th>
+</tr>
+
+<tr>
+<td><%= @transaction.item() %></td>
+<td>£<%= @transaction.amount() %> </td>
+<td><%= @transaction.merchant.name %> </td>
+<td><%= @transaction.category.tag %> </td> 
+</tr>
+
+</table>
 
 <p>
   <a href="/transactions/<%= @transaction.id %>/edit">Edit</a>

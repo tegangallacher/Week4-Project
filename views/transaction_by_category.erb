@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" type="text/css" href="/background.css"/>
 
 <table class ="flexcontainer">
 <tr>
@@ -8,6 +8,7 @@
 <th>More Details</th>
 </tr>
 <% for transaction in @transactions %>
+
 <tr>
 <td><%= transaction.item() %></td>
 <td>£<%= transaction.amount() %> </td>
@@ -15,6 +16,7 @@
 <td><a href="/transactions/<%= transaction.id() %>">View</a></td>
 </tr>
 <% end %>
+</table>
 
 <p>Treating yo self total of <%= transaction.category.tag%>: £<%= @total.first['sum'] %></p>
 
