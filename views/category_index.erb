@@ -1,8 +1,13 @@
 <link rel="stylesheet" type="text/css" href="/background.css"/>
 <h1>all categories</h1>
 <p><a href="/categories/new">Add New</a></p>
+
+<table class="flexcontainer">
+<tr>
 <% for category in @categories %>
-<p><%= category.tag() %>
-<a href="/categories/<%= category.id %>/edit">Edit</a>
-</p>
+<td><%= category.tag() %></td>
+<td><a href="/categories/<%= category.id %>/edit">Edit</a></td>
+</tr>
 <% end %>
+</table>
+ 

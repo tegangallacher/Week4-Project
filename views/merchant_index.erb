@@ -1,8 +1,12 @@
 <link rel="stylesheet" type="text/css" href="/background.css"/>
 <h1>all merchants</h1>
 <p><a href="/merchants/new">Add New</a></p>
+
+<table class="flexcontainer">
+<tr>
 <% for merchant in @merchants %>
-<p><%= merchant.name() %>
-  <a href="/merchants/<%= merchant.id %>/edit">Edit</a>
-</p>
+<td><%= merchant.name() %></td>
+<td><a href="/merchants/<%= merchant.id %>/edit">Edit</a></td>
+</tr>
 <% end %>
+</table>
