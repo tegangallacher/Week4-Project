@@ -19,19 +19,19 @@
   <% end %>
 </table>
   <p><a href="/transactions/new">Add New</a></p>
-  <p>
+ 
     <label>
-      Filter by category:
+      <p>Filter by category:</p>
       <form action="/categories/filter" method="post">
-        <p><select name="category_id">
+       <p> <select name="category_id">
          <% for category in @categories %>
-         <option value="<%=category.id%>"><%=category.tag%></option>
+        <option value="<%=category.id%>"><%=category.tag%></option>
          <% end %>
        </select>
      </label>
      <input type="submit" value="GO"/></p>
    </form>
- </p>
+
 
 
 

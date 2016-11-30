@@ -33,7 +33,7 @@ table {
 
 th, td {
     text-align: center;
-    padding: 8px;
+    padding: 6px;
 }
 
 tr:nth-child(even){background-color: MintCream }
