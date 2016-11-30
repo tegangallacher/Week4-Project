@@ -16,6 +16,6 @@ CREATE TABLE transactions (
   id SERIAL8 primary key,
   merchant_id INT8 references merchants(id),
   category_id INT8 references categories(id),
-  amount INT8,
+  amount FLOAT,
   item VARCHAR(255)
 );

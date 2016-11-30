@@ -10,7 +10,7 @@
     @id = nil || options['id'].to_i
     @merchant_id = options['merchant_id']
     @category_id = options['category_id']
-    @amount = options['amount'].to_i
+    @amount = options['amount'].to_f
     @item = options['item']
   end
 
